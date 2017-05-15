@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ZipCodes</title>
+</head>
+<body>
+   <p>Open</p>
+    <script>
+        fetch("http://localhost:8000/zips/city/seattle")
+            .then(function(resp) {
+                return resp.json()
+            })
+            .then(function(data) {
+                console.log(data)
+            })
+            .catch(function(err) {
+                console.error(err)
+            })
+    </script>
+    <!--<form>
+        City Name:
+        <input type="text" name="cityName" value="type here"><br>
+        <input type="submit" value="Search">
+    </form>-->
+    <!--<p>
+
+    </p>-->
+</body>
+</html>

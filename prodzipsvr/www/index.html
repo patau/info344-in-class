@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello!</h1>
+    <form>
+        City name:<br>
+        <input type="text" name="cityName">
+        <input type="submit" value="submit"><br>
+        <div id='data'></div>
+    </form>
+    <script>
+        const dataPut = document.getElementById('data');
+        const url = 'http://138.68.245.103/zips/city/seattle'//TODO
+
+        fetch(url)
+            .then((resp) => resp.json())
+            .then(function(data) {
+                console.log(data)
+                for (var i = 0; i < data.length; i++) {
+                    console.log("blah");
+                    dataPut.innerHTML += (data[i].zip) + '<br>';
+                }
+            })
+            .catch(function(error) {
+                console.log(error)
+            });
+    </script>
+</body>
+</html>

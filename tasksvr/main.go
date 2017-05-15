@@ -6,8 +6,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/info344-s17/in-class/tasksvr/handlers"
-	"github.com/info344-s17/in-class/tasksvr/models/tasks"
+	"github.com/patau/info344-in-class/tasksvr/handlers"
+	"github.com/patau/info344-in-class/tasksvr/models/tasks"
+
 	"gopkg.in/mgo.v2"
 )
 
